@@ -52,9 +52,6 @@ const Footer = () => (
         <Link to="/Impressum">
       Impressum
         </Link>
-        <FooterAuthor href="">
-            <FooterSpooch className="FooterSpooch" src={spooch} />
-        </FooterAuthor>
     </FooterContainer>
 )
 

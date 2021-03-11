@@ -40,18 +40,6 @@ const ButtonContainer = styled("button")`
         background: transparent;
         transition: background 100ms ease-in-out;
     }
-
-    &.Button--secondary {
-        background: ${colors.blue200};
-        color: ${colors.blue600};
-        padding: 0.95em 1.8em;
-        font-size: 0.95rem;
-
-        &:hover {
-            background: ${colors.blue300};
-            transition: background 100ms ease-in-out;
-        }
-    }
 `
 
 class Button extends Component {
