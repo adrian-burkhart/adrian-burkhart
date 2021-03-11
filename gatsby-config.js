@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Prist | Gatsby & Prismic Starter`,
-        description: `A starter powered by Gatsby and Prismic to showcase portfolios and blogs.`,
-    author: `Marguerite Roth | marguerite.io`,
+    title: `Adrian Burkhart | Web Developer at Flanke 7`,
+        description: `Personal Website with Works and Blog of Adrian Burkhart, Web Developer at Flanke 7. Also Book Reviews.`,
+    author: `Adrian Burkhart`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -24,9 +24,9 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-        resolve: 'gatsby-source-prismic-graphql',
+        resolve: '@prismicio/gatsby-source-prismic-graphql',
         options: {
-            repositoryName: 'prist', // (REQUIRED, replace with your own)
+            repositoryName: 'burkhart', // (REQUIRED, replace with your own)
             linkResolver: () => post => `/${post.uid}`,
         }
     },
