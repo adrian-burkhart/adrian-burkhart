@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "gatsby";
 import styled from "@emotion/styled";
 import colors from "styles/colors";
-import Logo from "components/_ui/Logo";
 import spooch from "images/oscar-icon.png"
 
 const FooterContainer = styled("div")`
@@ -50,11 +49,10 @@ const FooterSpooch = styled("img")`
 
 const Footer = () => (
     <FooterContainer>
-        <Link to="/">
-            <Logo />
+        <Link to="/Impressum">
+      Impressum
         </Link>
-        <FooterAuthor href="https://www.marguerite.io/?utm_source=prist&utm_medium=footer&utm_campaign=prist_starter">
-            © 2019 — Designed & developed by Marguerite Roth
+        <FooterAuthor href="">
             <FooterSpooch className="FooterSpooch" src={spooch} />
         </FooterAuthor>
     </FooterContainer>

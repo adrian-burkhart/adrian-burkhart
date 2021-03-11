@@ -37,7 +37,6 @@ const PostCardContainer = styled(Link)`
 
 const PostCategory = styled("h6")`
     font-weight: 600;
-    color: ${colors.grey600};
 `
 
 const PostTitle = styled("h3")`
