@@ -13,8 +13,11 @@ import sitemap from '@astrojs/sitemap'
 import mdx from '@astrojs/mdx'
 
 // https://astro.build/config
+import prefetch from '@astrojs/prefetch'
+
+// https://astro.build/config
 export default defineConfig({
   // Enable React to support React JSX components.
   site: 'https://adrian-burkhart.de',
-  integrations: [react(), tailwind(), sitemap(), mdx()],
+  integrations: [react(), tailwind(), sitemap(), mdx(), prefetch()],
 })
