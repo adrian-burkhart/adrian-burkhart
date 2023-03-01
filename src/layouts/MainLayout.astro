@@ -1,0 +1,39 @@
+---
+import "../style/global.css"
+import Footer from "../components/Footer.astro"
+import Nav from "../components/Nav.astro"
+const fallbackMetaTitle = "Adrian Burkhart - Fullstack Engineer"
+const fallbackMetaDescription =
+  "Adrian is a Fullstack Engineer living in Germany near Lüneburg. Currently working for re:cap Technologies."
+const { metaTitle, metaDescription } = Astro.props
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta
+      name="description"
+      content={metaDescription ?? fallbackMetaDescription}
+    />
+    <meta property="og:title" content={metaTitle ?? fallbackMetaTitle} />
+    <meta
+      property="og:description"
+      content={metaDescription ?? fallbackMetaDescription}
+    />
+    <!-- <meta property="og:image" content="" />  -->
+    <!-- TODO: Add Image -->
+    <title>{metaTitle ?? fallbackMetaTitle}</title>
+    <meta name="theme-color" content="#000000" />
+  </head>
+  <Nav />
+  <body>
+    <slot />
+    <!-- your content is injected here -->
+  </body>
+  <Footer />
+
+
+</html>

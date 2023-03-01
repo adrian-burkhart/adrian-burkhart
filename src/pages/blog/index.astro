@@ -1,0 +1,22 @@
+---
+import { getCollection } from "astro:content"
+import MainLayout from "../../layouts/MainLayout.astro"
+
+const allBlogPosts = await getCollection("blog")
+---
+
+<MainLayout>
+  <main>
+    <p>Blog Posts</p>
+    {
+      allBlogPosts.map((post) => {
+        return (
+          <div>
+            <h1>{post.data.title}</h1>
+            <p>{post.data.description}</p>
+          </div>
+        )
+      })
+    }
+  </main>
+</MainLayout>
