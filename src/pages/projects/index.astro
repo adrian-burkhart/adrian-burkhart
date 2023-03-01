@@ -6,7 +6,7 @@ const allProjects = await getCollection("projects")
 ---
 
 <MainLayout>
-  <main>
+  <>
     <p>Projects</p>
     {
       allProjects.map((project) => {
@@ -18,5 +18,5 @@ const allProjects = await getCollection("projects")
         )
       })
     }
-  </main>
+  </>
 </MainLayout>

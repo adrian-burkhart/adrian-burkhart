@@ -6,7 +6,7 @@ const allBlogPosts = await getCollection("blog")
 ---
 
 <MainLayout>
-  <main>
+  <>
     <p>Blog Posts</p>
     {
       allBlogPosts.map((post) => {
@@ -18,5 +18,5 @@ const allBlogPosts = await getCollection("blog")
         )
       })
     }
-  </main>
+  </>
 </MainLayout>

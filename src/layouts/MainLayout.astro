@@ -26,14 +26,13 @@ const { metaTitle, metaDescription } = Astro.props
     <!-- <meta property="og:image" content="" />  -->
     <!-- TODO: Add Image -->
     <title>{metaTitle ?? fallbackMetaTitle}</title>
-    <meta name="theme-color" content="#000000" />
   </head>
-  <Nav />
-  <body>
-    <slot />
-    <!-- your content is injected here -->
+  <body class="flex min-h-screen flex-col bg-slate-600 p-2 sm:p-8">
+    <Nav />
+    <main class="flex grow flex-col items-center p-2 sm:p-8">
+      <slot />
+      <!-- your content is injected here -->
+    </main>
+    <Footer />
   </body>
-  <Footer />
-
-
 </html>
