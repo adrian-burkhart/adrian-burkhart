@@ -16,7 +16,13 @@ const { Content } = await project.render()
 
 <MainLayout
   metaTitle={project.data.title}
-  metaDescription={project.data.description}
+  metaDescription={project.data.shortDescription}
 >
+<div class="flex flex-col gap-4 justify-center items-center">
+  <h1>{project.data.title}</h1>
+  <a href={project.data.link}>Link to project</a>
+  <p class="text-center max-w-prose">{project.data.longDescription}</p>
+  <p>Tech used: <div class="flex">{project.data.techStack.map((tech: string, i: number) => <>{tech}{i + 1 === project.data.techStack.length ? "" : ",  "}</>)}</div></p>
   <Content />
+  <img class="my-12" src={project.data.image.url} alt={project.data.image.alt} width="900" /></div>
 </MainLayout>
